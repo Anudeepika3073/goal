@@ -1,0 +1,45 @@
+<mvc:View
+    controllerName="com.sap.btp.zcurdapp.zopa.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <List id = "idList" items="{/Categories}" mode="SingleSelectLeft">
+            <items>
+                <StandardListItem 
+                    title="{ID}"
+                    description="{Name}"
+                />
+            </items>
+        </List>
+        <VBox>
+            <Input
+                id="idId"
+                placeholder="ID"
+            />
+            <Input
+                id="idName"
+                placeholder="Name"
+            />
+
+            <Button
+                id="idCreateButton"
+                text="create"
+                press="onCreateCategory"
+            />
+            <Button
+                text="Update"
+                press="onUpdateCategory"
+            />
+            <Button
+                text="Delete"
+                press="onDeleteCategory"
+            />
+
+            <Button text="Nav to Second page" id="navPage2" press="onNavToSecondPage" />
+        </VBox>
+    </Page>
+</mvc:View>

@@ -39,7 +39,7 @@
     "start-variants-management": "fiori run --open \"/preview.html#app-preview\"",
     "unit-test": "fiori run --config ./ui5-mock.yaml --open \"test/unit/unitTests.qunit.html\"",
     "opa-ci": "karma start karma.conf.cjs",
-    "lint:sonar": "eslint . -f json -o eslint-report.json",
+    "lint:sonar": "eslint . -f node_modules/eslint-formatter-sonarqube -o eslint-report.json",
     "test": "jest --coverage"
   },
   "sapuxLayer": "CUSTOMER_BASE"
